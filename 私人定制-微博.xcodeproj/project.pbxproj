@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8831AB4C1BCE73C00093CBAB /* RSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8831AB4B1BCE73C00093CBAB /* RSSearchBar.m */; settings = {ASSET_TAGS = (); }; };
+		8831AB521BCE75780093CBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8831AB511BCE75780093CBAB /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		8831AB5A1BCE989E0093CBAB /* UIImage+RSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8831AB591BCE989E0093CBAB /* UIImage+RSImage.m */; settings = {ASSET_TAGS = (); }; };
+		8831AB5C1BCE98BB0093CBAB /* UIBarButtonItem+RSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8831AB5B1BCE98BB0093CBAB /* UIBarButtonItem+RSItem.m */; settings = {ASSET_TAGS = (); }; };
+		886742D81BC7CA8500344180 /* RSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742D71BC7CA8500344180 /* RSNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		886742DB1BC7CAD100344180 /* RSDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742DA1BC7CAD100344180 /* RSDiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
+		886742DE1BC7CAE300344180 /* RSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742DD1BC7CAE300344180 /* RSHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		886742E11BC7CAF400344180 /* RSMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E01BC7CAF400344180 /* RSMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		886742E41BC7CB1A00344180 /* RSProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E31BC7CB1A00344180 /* RSProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
+		886742E71BC8A7CE00344180 /* RSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E61BC8A7CE00344180 /* RSTabBar.m */; settings = {ASSET_TAGS = (); }; };
+		886742EA1BC8A9F400344180 /* RSTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E91BC8A9F400344180 /* RSTabBarButton.m */; settings = {ASSET_TAGS = (); }; };
+		886742ED1BC8AA8800344180 /* RSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742EC1BC8AA8800344180 /* RSBadgeView.m */; settings = {ASSET_TAGS = (); }; };
+		88C4CE0D1BCCA9500055A949 /* RSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */; settings = {ASSET_TAGS = (); }; };
+		88C4CE101BCCA9C70055A949 /* RSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE0F1BCCA9C70055A949 /* RSPopMenu.m */; settings = {ASSET_TAGS = (); }; };
+		88C4CE131BCCA9DC0055A949 /* RSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE121BCCA9DC0055A949 /* RSCover.m */; settings = {ASSET_TAGS = (); }; };
+		88C4CE161BCCF21E0055A949 /* UIBarButtonItem+RSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE151BCCF21E0055A949 /* UIBarButtonItem+RSItem.m */; settings = {ASSET_TAGS = (); }; };
+		88CF97621BC6821B004E0C81 /* RSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF97511BC6821B004E0C81 /* RSTabBarController.m */; settings = {ASSET_TAGS = (); }; };
+		88CF97641BC6821B004E0C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF975C1BC6821B004E0C81 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		88CF97651BC6821B004E0C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF975D1BC6821B004E0C81 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		88D1155B1BCB87AE00A9FDF1 /* UIView+RSFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D1155A1BCB87AE00A9FDF1 /* UIView+RSFrame.m */; settings = {ASSET_TAGS = (); }; };
+		88D183281BC64D8C00FABF52 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D183271BC64D8C00FABF52 /* _______Tests.m */; };
+		88D183331BC64D8D00FABF52 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D183321BC64D8D00FABF52 /* _______UITests.m */; };
+		88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		88E51D391BCF942200BC42C0 /* RSNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D381BCF942100BC42C0 /* RSNewFeatureController.m */; settings = {ASSET_TAGS = (); }; };
+		88E51D3C1BCF95B600BC42C0 /* RSNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D3B1BCF95B600BC42C0 /* RSNewFeatureCell.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88D183241BC64D8C00FABF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88D183021BC64D8C00FABF52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88D183091BC64D8C00FABF52;
+			remoteInfo = "私人定制-微博";
+		};
+		88D1832F1BC64D8D00FABF52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88D183021BC64D8C00FABF52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88D183091BC64D8C00FABF52;
+			remoteInfo = "私人定制-微博";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8831AB4A1BCE73C00093CBAB /* RSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSearchBar.h; sourceTree = "<group>"; };
+		8831AB4B1BCE73C00093CBAB /* RSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSearchBar.m; sourceTree = "<group>"; };
+		8831AB511BCE75780093CBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8831AB531BCE75C90093CBAB /* UIImage+RSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSImage.h"; sourceTree = "<group>"; };
+		8831AB591BCE989E0093CBAB /* UIImage+RSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSImage.m"; sourceTree = "<group>"; };
+		8831AB5B1BCE98BB0093CBAB /* UIBarButtonItem+RSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RSItem.m"; sourceTree = "<group>"; };
+		886742D61BC7CA8500344180 /* RSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNavigationController.h; sourceTree = "<group>"; };
+		886742D71BC7CA8500344180 /* RSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNavigationController.m; sourceTree = "<group>"; };
+		886742D91BC7CAD100344180 /* RSDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSDiscoverViewController.h; sourceTree = "<group>"; };
+		886742DA1BC7CAD100344180 /* RSDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSDiscoverViewController.m; sourceTree = "<group>"; };
+		886742DC1BC7CAE300344180 /* RSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHomeViewController.h; sourceTree = "<group>"; };
+		886742DD1BC7CAE300344180 /* RSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHomeViewController.m; sourceTree = "<group>"; };
+		886742DF1BC7CAF400344180 /* RSMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSMessageViewController.h; path = ../RSMessageViewController.h; sourceTree = "<group>"; };
+		886742E01BC7CAF400344180 /* RSMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSMessageViewController.m; path = ../RSMessageViewController.m; sourceTree = "<group>"; };
+		886742E21BC7CB1A00344180 /* RSProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSProfileViewController.h; sourceTree = "<group>"; };
+		886742E31BC7CB1A00344180 /* RSProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSProfileViewController.m; sourceTree = "<group>"; };
+		886742E51BC8A7CE00344180 /* RSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTabBar.h; sourceTree = "<group>"; };
+		886742E61BC8A7CE00344180 /* RSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTabBar.m; sourceTree = "<group>"; };
+		886742E81BC8A9F400344180 /* RSTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTabBarButton.h; sourceTree = "<group>"; };
+		886742E91BC8A9F400344180 /* RSTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTabBarButton.m; sourceTree = "<group>"; };
+		886742EB1BC8AA8800344180 /* RSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBadgeView.h; sourceTree = "<group>"; };
+		886742EC1BC8AA8800344180 /* RSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBadgeView.m; sourceTree = "<group>"; };
+		88C4CE0B1BCCA9500055A949 /* RSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTitleButton.h; sourceTree = "<group>"; };
+		88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTitleButton.m; sourceTree = "<group>"; };
+		88C4CE0E1BCCA9C70055A949 /* RSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSPopMenu.h; sourceTree = "<group>"; };
+		88C4CE0F1BCCA9C70055A949 /* RSPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSPopMenu.m; sourceTree = "<group>"; };
+		88C4CE111BCCA9DC0055A949 /* RSCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCover.h; sourceTree = "<group>"; };
+		88C4CE121BCCA9DC0055A949 /* RSCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCover.m; sourceTree = "<group>"; };
+		88C4CE141BCCF21E0055A949 /* UIBarButtonItem+RSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+RSItem.h"; sourceTree = "<group>"; };
+		88C4CE151BCCF21E0055A949 /* UIBarButtonItem+RSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RSItem.m"; sourceTree = "<group>"; };
+		88CF97501BC6821B004E0C81 /* RSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTabBarController.h; sourceTree = "<group>"; };
+		88CF97511BC6821B004E0C81 /* RSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTabBarController.m; sourceTree = "<group>"; };
+		88CF975B1BC6821B004E0C81 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88CF975C1BC6821B004E0C81 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88CF975D1BC6821B004E0C81 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88D115591BCB87AE00A9FDF1 /* UIView+RSFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RSFrame.h"; sourceTree = "<group>"; };
+		88D1155A1BCB87AE00A9FDF1 /* UIView+RSFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RSFrame.m"; sourceTree = "<group>"; };
+		88D1155C1BCB8A4000A9FDF1 /* 私人定制-weibo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "私人定制-weibo.pch"; sourceTree = "<group>"; };
+		88D1830A1BC64D8C00FABF52 /* 私人定制-微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "私人定制-微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D1831E1BC64D8C00FABF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D183231BC64D8C00FABF52 /* 私人定制-微博Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "私人定制-微博Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D183271BC64D8C00FABF52 /* _______Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______Tests.m"; sourceTree = "<group>"; };
+		88D183291BC64D8C00FABF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D1832E1BC64D8D00FABF52 /* 私人定制-微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "私人定制-微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88D183321BC64D8D00FABF52 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
+		88D183341BC64D8D00FABF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88E1C4B31BCE27BD006FBECF /* RSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMenuViewController.h; sourceTree = "<group>"; };
+		88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMenuViewController.m; sourceTree = "<group>"; };
+		88E51D371BCF942100BC42C0 /* RSNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewFeatureController.h; sourceTree = "<group>"; };
+		88E51D381BCF942100BC42C0 /* RSNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewFeatureController.m; sourceTree = "<group>"; };
+		88E51D3A1BCF95B600BC42C0 /* RSNewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewFeatureCell.h; sourceTree = "<group>"; };
+		88E51D3B1BCF95B600BC42C0 /* RSNewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSNewFeatureCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88D183071BC64D8C00FABF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D183201BC64D8C00FABF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D1832B1BC64D8C00FABF52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88CF97451BC6821B004E0C81 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				88E51D331BCF935100BC42C0 /* NewFeature(新特性) */,
+				88CF974E1BC6821B004E0C81 /* Main */,
+				88CF974A1BC6821B004E0C81 /* Home(首页) */,
+				88CF97561BC6821B004E0C81 /* Message(消息) */,
+				88CF97461BC6821B004E0C81 /* Discover(发现) */,
+				88CF975E1BC6821B004E0C81 /* Profile(我) */,
+				88CF975A1BC6821B004E0C81 /* Others */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		88CF97461BC6821B004E0C81 /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				88CF97471BC6821B004E0C81 /* Controller */,
+				88CF97481BC6821B004E0C81 /* Modal */,
+				88CF97491BC6821B004E0C81 /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		88CF97471BC6821B004E0C81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				886742D91BC7CAD100344180 /* RSDiscoverViewController.h */,
+				886742DA1BC7CAD100344180 /* RSDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CF97481BC6821B004E0C81 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88CF97491BC6821B004E0C81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8831AB4A1BCE73C00093CBAB /* RSSearchBar.h */,
+				8831AB4B1BCE73C00093CBAB /* RSSearchBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CF974A1BC6821B004E0C81 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				88CF974B1BC6821B004E0C81 /* Controller */,
+				88CF974C1BC6821B004E0C81 /* Modal */,
+				88CF974D1BC6821B004E0C81 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		88CF974B1BC6821B004E0C81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				886742DC1BC7CAE300344180 /* RSHomeViewController.h */,
+				886742DD1BC7CAE300344180 /* RSHomeViewController.m */,
+				88E1C4B31BCE27BD006FBECF /* RSMenuViewController.h */,
+				88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CF974C1BC6821B004E0C81 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88CF974D1BC6821B004E0C81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88C4CE0B1BCCA9500055A949 /* RSTitleButton.h */,
+				88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */,
+				88C4CE0E1BCCA9C70055A949 /* RSPopMenu.h */,
+				88C4CE0F1BCCA9C70055A949 /* RSPopMenu.m */,
+				88C4CE111BCCA9DC0055A949 /* RSCover.h */,
+				88C4CE121BCCA9DC0055A949 /* RSCover.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CF974E1BC6821B004E0C81 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				88CF974F1BC6821B004E0C81 /* Controller */,
+				88CF97521BC6821B004E0C81 /* Modal */,
+				88CF97531BC6821B004E0C81 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		88CF974F1BC6821B004E0C81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88CF97501BC6821B004E0C81 /* RSTabBarController.h */,
+				88CF97511BC6821B004E0C81 /* RSTabBarController.m */,
+				886742D61BC7CA8500344180 /* RSNavigationController.h */,
+				886742D71BC7CA8500344180 /* RSNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CF97521BC6821B004E0C81 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88CF97531BC6821B004E0C81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				886742E51BC8A7CE00344180 /* RSTabBar.h */,
+				886742E61BC8A7CE00344180 /* RSTabBar.m */,
+				886742E81BC8A9F400344180 /* RSTabBarButton.h */,
+				886742E91BC8A9F400344180 /* RSTabBarButton.m */,
+				886742EB1BC8AA8800344180 /* RSBadgeView.h */,
+				886742EC1BC8AA8800344180 /* RSBadgeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CF97561BC6821B004E0C81 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				88CF97571BC6821B004E0C81 /* Controller */,
+				88CF97581BC6821B004E0C81 /* Modal */,
+				88CF97591BC6821B004E0C81 /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		88CF97571BC6821B004E0C81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				886742DF1BC7CAF400344180 /* RSMessageViewController.h */,
+				886742E01BC7CAF400344180 /* RSMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CF97581BC6821B004E0C81 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88CF97591BC6821B004E0C81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88CF975A1BC6821B004E0C81 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				88CF975B1BC6821B004E0C81 /* AppDelegate.h */,
+				88CF975C1BC6821B004E0C81 /* AppDelegate.m */,
+				88CF975D1BC6821B004E0C81 /* main.m */,
+				88D115591BCB87AE00A9FDF1 /* UIView+RSFrame.h */,
+				88D1155A1BCB87AE00A9FDF1 /* UIView+RSFrame.m */,
+				88C4CE141BCCF21E0055A949 /* UIBarButtonItem+RSItem.h */,
+				8831AB531BCE75C90093CBAB /* UIImage+RSImage.h */,
+				8831AB591BCE989E0093CBAB /* UIImage+RSImage.m */,
+				88C4CE151BCCF21E0055A949 /* UIBarButtonItem+RSItem.m */,
+				8831AB5B1BCE98BB0093CBAB /* UIBarButtonItem+RSItem.m */,
+				88D1155C1BCB8A4000A9FDF1 /* 私人定制-weibo.pch */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		88CF975E1BC6821B004E0C81 /* Profile(我) */ = {
+			isa = PBXGroup;
+			children = (
+				88CF975F1BC6821B004E0C81 /* Controller */,
+				88CF97601BC6821B004E0C81 /* Modal */,
+				88CF97611BC6821B004E0C81 /* View */,
+			);
+			path = "Profile(我)";
+			sourceTree = "<group>";
+		};
+		88CF975F1BC6821B004E0C81 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				886742E21BC7CB1A00344180 /* RSProfileViewController.h */,
+				886742E31BC7CB1A00344180 /* RSProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88CF97601BC6821B004E0C81 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88CF97611BC6821B004E0C81 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88D183011BC64D8C00FABF52 = {
+			isa = PBXGroup;
+			children = (
+				88D1830C1BC64D8C00FABF52 /* 私人定制-微博 */,
+				88D183261BC64D8C00FABF52 /* 私人定制-微博Tests */,
+				88D183311BC64D8D00FABF52 /* 私人定制-微博UITests */,
+				88D1830B1BC64D8C00FABF52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88D1830B1BC64D8C00FABF52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88D1830A1BC64D8C00FABF52 /* 私人定制-微博.app */,
+				88D183231BC64D8C00FABF52 /* 私人定制-微博Tests.xctest */,
+				88D1832E1BC64D8D00FABF52 /* 私人定制-微博UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88D1830C1BC64D8C00FABF52 /* 私人定制-微博 */ = {
+			isa = PBXGroup;
+			children = (
+				88CF97451BC6821B004E0C81 /* classes */,
+				88D1831E1BC64D8C00FABF52 /* Info.plist */,
+				8831AB511BCE75780093CBAB /* Assets.xcassets */,
+				88D1830D1BC64D8C00FABF52 /* Supporting Files */,
+			);
+			path = "私人定制-微博";
+			sourceTree = "<group>";
+		};
+		88D1830D1BC64D8C00FABF52 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88D183261BC64D8C00FABF52 /* 私人定制-微博Tests */ = {
+			isa = PBXGroup;
+			children = (
+				88D183271BC64D8C00FABF52 /* _______Tests.m */,
+				88D183291BC64D8C00FABF52 /* Info.plist */,
+			);
+			path = "私人定制-微博Tests";
+			sourceTree = "<group>";
+		};
+		88D183311BC64D8D00FABF52 /* 私人定制-微博UITests */ = {
+			isa = PBXGroup;
+			children = (
+				88D183321BC64D8D00FABF52 /* _______UITests.m */,
+				88D183341BC64D8D00FABF52 /* Info.plist */,
+			);
+			path = "私人定制-微博UITests";
+			sourceTree = "<group>";
+		};
+		88E51D331BCF935100BC42C0 /* NewFeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				88E51D341BCF935100BC42C0 /* Controller */,
+				88E51D351BCF935100BC42C0 /* Modal */,
+				88E51D361BCF935100BC42C0 /* View */,
+			);
+			path = "NewFeature(新特性)";
+			sourceTree = "<group>";
+		};
+		88E51D341BCF935100BC42C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88E51D371BCF942100BC42C0 /* RSNewFeatureController.h */,
+				88E51D381BCF942100BC42C0 /* RSNewFeatureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88E51D351BCF935100BC42C0 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88E51D361BCF935100BC42C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88E51D3A1BCF95B600BC42C0 /* RSNewFeatureCell.h */,
+				88E51D3B1BCF95B600BC42C0 /* RSNewFeatureCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88D183091BC64D8C00FABF52 /* 私人定制-微博 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88D183371BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博" */;
+			buildPhases = (
+				88D183061BC64D8C00FABF52 /* Sources */,
+				88D183071BC64D8C00FABF52 /* Frameworks */,
+				88D183081BC64D8C00FABF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "私人定制-微博";
+			productName = "私人定制-微博";
+			productReference = 88D1830A1BC64D8C00FABF52 /* 私人定制-微博.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88D183221BC64D8C00FABF52 /* 私人定制-微博Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88D1833A1BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博Tests" */;
+			buildPhases = (
+				88D1831F1BC64D8C00FABF52 /* Sources */,
+				88D183201BC64D8C00FABF52 /* Frameworks */,
+				88D183211BC64D8C00FABF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88D183251BC64D8C00FABF52 /* PBXTargetDependency */,
+			);
+			name = "私人定制-微博Tests";
+			productName = "私人定制-微博Tests";
+			productReference = 88D183231BC64D8C00FABF52 /* 私人定制-微博Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88D1832D1BC64D8C00FABF52 /* 私人定制-微博UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88D1833D1BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博UITests" */;
+			buildPhases = (
+				88D1832A1BC64D8C00FABF52 /* Sources */,
+				88D1832B1BC64D8C00FABF52 /* Frameworks */,
+				88D1832C1BC64D8C00FABF52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88D183301BC64D8D00FABF52 /* PBXTargetDependency */,
+			);
+			name = "私人定制-微博UITests";
+			productName = "私人定制-微博UITests";
+			productReference = 88D1832E1BC64D8D00FABF52 /* 私人定制-微博UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88D183021BC64D8C00FABF52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RS;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Roland Sung";
+				TargetAttributes = {
+					88D183091BC64D8C00FABF52 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = QFU8235VDL;
+					};
+					88D183221BC64D8C00FABF52 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = QFU8235VDL;
+						TestTargetID = 88D183091BC64D8C00FABF52;
+					};
+					88D1832D1BC64D8C00FABF52 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = QFU8235VDL;
+						TestTargetID = 88D183091BC64D8C00FABF52;
+					};
+				};
+			};
+			buildConfigurationList = 88D183051BC64D8C00FABF52 /* Build configuration list for PBXProject "私人定制-微博" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88D183011BC64D8C00FABF52;
+			productRefGroup = 88D1830B1BC64D8C00FABF52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88D183091BC64D8C00FABF52 /* 私人定制-微博 */,
+				88D183221BC64D8C00FABF52 /* 私人定制-微博Tests */,
+				88D1832D1BC64D8C00FABF52 /* 私人定制-微博UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88D183081BC64D8C00FABF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8831AB521BCE75780093CBAB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D183211BC64D8C00FABF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D1832C1BC64D8C00FABF52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88D183061BC64D8C00FABF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C4CE161BCCF21E0055A949 /* UIBarButtonItem+RSItem.m in Sources */,
+				88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */,
+				886742E71BC8A7CE00344180 /* RSTabBar.m in Sources */,
+				886742D81BC7CA8500344180 /* RSNavigationController.m in Sources */,
+				8831AB5C1BCE98BB0093CBAB /* UIBarButtonItem+RSItem.m in Sources */,
+				88C4CE131BCCA9DC0055A949 /* RSCover.m in Sources */,
+				886742ED1BC8AA8800344180 /* RSBadgeView.m in Sources */,
+				886742EA1BC8A9F400344180 /* RSTabBarButton.m in Sources */,
+				8831AB5A1BCE989E0093CBAB /* UIImage+RSImage.m in Sources */,
+				88E51D391BCF942200BC42C0 /* RSNewFeatureController.m in Sources */,
+				88CF97621BC6821B004E0C81 /* RSTabBarController.m in Sources */,
+				8831AB4C1BCE73C00093CBAB /* RSSearchBar.m in Sources */,
+				88C4CE101BCCA9C70055A949 /* RSPopMenu.m in Sources */,
+				886742E41BC7CB1A00344180 /* RSProfileViewController.m in Sources */,
+				886742DE1BC7CAE300344180 /* RSHomeViewController.m in Sources */,
+				88CF97651BC6821B004E0C81 /* main.m in Sources */,
+				886742E11BC7CAF400344180 /* RSMessageViewController.m in Sources */,
+				886742DB1BC7CAD100344180 /* RSDiscoverViewController.m in Sources */,
+				88E51D3C1BCF95B600BC42C0 /* RSNewFeatureCell.m in Sources */,
+				88CF97641BC6821B004E0C81 /* AppDelegate.m in Sources */,
+				88D1155B1BCB87AE00A9FDF1 /* UIView+RSFrame.m in Sources */,
+				88C4CE0D1BCCA9500055A949 /* RSTitleButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D1831F1BC64D8C00FABF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88D183281BC64D8C00FABF52 /* _______Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D1832A1BC64D8C00FABF52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88D183331BC64D8D00FABF52 /* _______UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88D183251BC64D8C00FABF52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88D183091BC64D8C00FABF52 /* 私人定制-微博 */;
+			targetProxy = 88D183241BC64D8C00FABF52 /* PBXContainerItemProxy */;
+		};
+		88D183301BC64D8D00FABF52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88D183091BC64D8C00FABF52 /* 私人定制-微博 */;
+			targetProxy = 88D1832F1BC64D8D00FABF52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		88D183351BC64D8D00FABF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		88D183361BC64D8D00FABF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88D183381BC64D8D00FABF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				GCC_PREFIX_HEADER = "私人定制-微博/classes/Others/私人定制-weibo.pch";
+				INFOPLIST_FILE = "私人定制-微博/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		88D183391BC64D8D00FABF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				GCC_PREFIX_HEADER = "私人定制-微博/classes/Others/私人定制-weibo.pch";
+				INFOPLIST_FILE = "私人定制-微博/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		88D1833B1BC64D8D00FABF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "私人定制-微博Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/私人定制-微博.app/私人定制-微博";
+			};
+			name = Debug;
+		};
+		88D1833C1BC64D8D00FABF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "私人定制-微博Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/私人定制-微博.app/私人定制-微博";
+			};
+			name = Release;
+		};
+		88D1833E1BC64D8D00FABF52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "私人定制-微博UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "私人定制-微博";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		88D1833F1BC64D8D00FABF52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "私人定制-微博UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.song.-------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "私人定制-微博";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88D183051BC64D8C00FABF52 /* Build configuration list for PBXProject "私人定制-微博" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D183351BC64D8D00FABF52 /* Debug */,
+				88D183361BC64D8D00FABF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88D183371BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D183381BC64D8D00FABF52 /* Debug */,
+				88D183391BC64D8D00FABF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88D1833A1BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D1833B1BC64D8D00FABF52 /* Debug */,
+				88D1833C1BC64D8D00FABF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88D1833D1BC64D8D00FABF52 /* Build configuration list for PBXNativeTarget "私人定制-微博UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D1833E1BC64D8D00FABF52 /* Debug */,
+				88D1833F1BC64D8D00FABF52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88D183021BC64D8C00FABF52 /* Project object */;
+}

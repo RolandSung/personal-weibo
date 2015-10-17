@@ -1,0 +1,32 @@
+//
+//  私人定制-weibo.pch
+//  私人定制-微博
+//
+//  Created by imac on 15/10/12.
+//  Copyright © 2015年 Roland Sung. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "UIView+RSFrame.h"
+#import "UIBarButtonItem+RSItem.h"
+#import "UIImage+RSImage.h"
+
+#define RSKScreenWidth [UIScreen mainScreen].bounds.size.width
+#define RSKScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define RSKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 调试
+
+#define RSLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define RSLog(...)
+
+#endif
+
+#endif
