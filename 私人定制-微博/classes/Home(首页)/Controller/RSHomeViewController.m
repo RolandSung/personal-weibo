@@ -13,6 +13,12 @@
 #import "RSTitleButton.h"
 #import "RSCover.h"
 #import "RSPopMenu.h"
+#import "AFNetworking.h"
+#import "RSAccountTool.h"
+#import "MJExtension.h"
+#import "RSStatus.h"
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
 
 
 @interface RSHomeViewController ()<RSCoverDelegate>
@@ -20,9 +26,19 @@
 @property(nonatomic,strong)RSMenuViewController *menuVC;
 @property(nonatomic,strong) RSTitleButton *titleBtn;
 
+@property (nonatomic,strong) NSMutableArray *statuses;
+
 @end
 
 @implementation RSHomeViewController
+
+-(NSMutableArray *)statuses{
+    if (_statuses == nil) {
+        
+        _statuses = [NSMutableArray array];
+    }
+    return _statuses;
+}
 
 -(RSMenuViewController *)menuVC{
     if (_menuVC == nil) {
@@ -36,15 +52,126 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self _setUpNavigationBar];
     
+    
+    
+    MJRefreshAutoFooter *footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreStatus)];
+    
+    
+    self.tableView.footer = footer;
+    
+    
+    
+    //下拉刷新
+    
+    MJRefreshGifHeader *header= [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewStatus)];
+    
+//    header.lastUpdatedTimeLabel.hidden = YES;
+    
+     self.tableView.header = header;
+    
+    //自动下拉刷新
+    if (_statuses == nil) {
+        [self.tableView.header beginRefreshing];
+
+    }
+
     
 }
 
 
 
 
+
 #pragma mark - private method
+
+- (void)loadMoreStatus{
+    
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    //请求参数
+    parameter[@"access_token"] = [RSAccountTool account].access_token;
+    //有数据才需要刷新
+    if (self.statuses.count) {
+        long long maxID = [[[self.statuses lastObject] idstr] longLongValue ]- 1 ;
+        parameter[@"max_id"] =[NSString stringWithFormat:@"%lld",maxID];
+    }
+    
+    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        //结束上拉刷新
+        [self.tableView.footer endRefreshing];
+        
+        NSArray *dictArr = responseObject[@"statuses"];
+        
+        //字典数组转模型数组
+        NSArray *statuses = [RSStatus objectArrayWithKeyValuesArray:dictArr];
+        
+        //把元素添加进去
+        [self.statuses addObjectsFromArray:statuses ];
+        
+        //刷新表格
+        [self.tableView reloadData];
+        
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        
+        
+        RSLog(@"%@",error);
+    }];
+
+    
+    
+    
+    
+    
+    
+}
+
+- (void)loadNewStatus{
+    
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    //请求参数
+    parameter[@"access_token"] = [RSAccountTool account].access_token;
+    if (self.statuses.count) {
+        parameter[@"since_id"] = [self.statuses[0] idstr];
+    }
+    
+    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+       
+        //结束下拉刷新
+        [self.tableView.header endRefreshing];
+        
+        NSArray *dictArr = responseObject[@"statuses"];
+      
+        //字典数组转模型数组
+        NSArray *statuses = [RSStatus objectArrayWithKeyValuesArray:dictArr];
+        
+        NSIndexSet *indext = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
+        [self.statuses insertObjects:statuses atIndexes:indext];
+
+        [self.tableView reloadData];
+        
+        
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        
+        
+        RSLog(@"%@",error);
+    }];
+    
+    
+    
+    
+    
+    
+    
+}
+#pragma mark - 设置导航条
 - (void)_setUpNavigationBar{
     
     //zuobian
@@ -110,25 +237,29 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.statuses.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID ];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
+    }
+    
+    RSStatus *status = self.statuses[indexPath.row];
+    
+    cell.textLabel.text = status.user.name;
+    cell.detailTextLabel.text  =status.text;
+    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

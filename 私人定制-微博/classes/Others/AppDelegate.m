@@ -11,6 +11,7 @@
 #import "RSOAuthController.h"
 #import "RSAccountTool.h"
 #import "RSRootVCTool.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface AppDelegate ()
@@ -38,6 +39,21 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-(void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    
+    //停止下载
+    [[SDWebImageManager sharedManager] cancelAll];
+    
+    
+    //清除缓存
+    
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    
+    
+    
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

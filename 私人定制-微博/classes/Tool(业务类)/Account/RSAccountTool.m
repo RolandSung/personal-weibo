@@ -18,8 +18,7 @@ static RSAccount *_account;
     
     //归档
     [NSKeyedArchiver archiveRootObject:account toFile:RSAccountFileName];
-    
-    
+        
     
 }
 
