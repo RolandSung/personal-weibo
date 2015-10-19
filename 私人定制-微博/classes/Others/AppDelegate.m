@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "RSTabBarController.h"
-#import "RSNewFeatureController.h"
 
-#define RSVersionKey @"lastVersion"
+#import "RSOAuthController.h"
+#import "RSAccountTool.h"
+#import "RSRootVCTool.h"
+
 
 @interface AppDelegate ()
 
@@ -24,24 +25,14 @@
     
    //创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
-    
-    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:RSVersionKey];
-   
-    
-    //判断版本
-    if ([currentVersion isEqualToString:lastVersion]) {
-        self.window.rootViewController = [[RSTabBarController alloc]init];
-
+    if ([RSAccountTool account]) {
+        
+        [RSRootVCTool chooseRootViewController:self.window];
         
     }else{
-    //新特性
-    self.window.rootViewController = [[RSNewFeatureController alloc]init];
         
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:RSVersionKey];
-    
+        self.window.rootViewController = [[RSOAuthController alloc]init];
+ 
     }
     
     [self.window makeKeyAndVisible];
