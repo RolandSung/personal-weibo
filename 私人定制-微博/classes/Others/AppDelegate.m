@@ -26,6 +26,7 @@
     
    //创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+   
     if ([RSAccountTool account]) {
         
         [RSRootVCTool chooseRootViewController:self.window];

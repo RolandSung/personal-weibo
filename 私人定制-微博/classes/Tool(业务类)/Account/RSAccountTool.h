@@ -11,8 +11,16 @@
 
 @interface RSAccountTool : NSObject
 
+/**
+ *  保存帐号信息
+ */
 +(void)saveAccount:(RSAccount *)account;
 
+/**
+ *  取出保存了的帐号
+ */
 +(RSAccount *)account;
 
+
++ (void)accountWithCode:(NSString *)code success:(void(^)())success failure:(void(^)(NSError *error))failure;
 @end

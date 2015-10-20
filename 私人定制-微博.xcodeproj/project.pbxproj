@@ -95,6 +95,7 @@
 		88D5E7951BD61F9C00B2DDEA /* RSStatusParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E7941BD61F9C00B2DDEA /* RSStatusParam.m */; settings = {ASSET_TAGS = (); }; };
 		88D5E79B1BD6211600B2DDEA /* RSStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E79A1BD6211600B2DDEA /* RSStatusTool.m */; settings = {ASSET_TAGS = (); }; };
 		88D5E79E1BD6243E00B2DDEA /* RSStatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E79D1BD6243E00B2DDEA /* RSStatusResult.m */; settings = {ASSET_TAGS = (); }; };
+		88D5E7A21BD651C000B2DDEA /* RSAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E7A11BD651BF00B2DDEA /* RSAccountParam.m */; settings = {ASSET_TAGS = (); }; };
 		88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		88E51D391BCF942200BC42C0 /* RSNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D381BCF942100BC42C0 /* RSNewFeatureController.m */; settings = {ASSET_TAGS = (); }; };
 		88E51D3C1BCF95B600BC42C0 /* RSNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D3B1BCF95B600BC42C0 /* RSNewFeatureCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -300,6 +301,8 @@
 		88D5E79A1BD6211600B2DDEA /* RSStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSStatusTool.m; path = result/RSStatusTool.m; sourceTree = "<group>"; };
 		88D5E79C1BD6243E00B2DDEA /* RSStatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusResult.h; sourceTree = "<group>"; };
 		88D5E79D1BD6243E00B2DDEA /* RSStatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusResult.m; sourceTree = "<group>"; };
+		88D5E7A01BD651BF00B2DDEA /* RSAccountParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAccountParam.h; sourceTree = "<group>"; };
+		88D5E7A11BD651BF00B2DDEA /* RSAccountParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAccountParam.m; sourceTree = "<group>"; };
 		88E1C4B31BCE27BD006FBECF /* RSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMenuViewController.h; sourceTree = "<group>"; };
 		88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMenuViewController.m; sourceTree = "<group>"; };
 		88E51D371BCF942100BC42C0 /* RSNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewFeatureController.h; sourceTree = "<group>"; };
@@ -442,6 +445,7 @@
 		8879FEA61BD48CD300D77EF2 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				88D5E79F1BD651A700B2DDEA /* Param */,
 				8879FEA81BD48D0600D77EF2 /* RSAccountTool.h */,
 				8879FEA91BD48D0600D77EF2 /* RSAccountTool.m */,
 			);
@@ -932,6 +936,15 @@
 			path = result;
 			sourceTree = "<group>";
 		};
+		88D5E79F1BD651A700B2DDEA /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				88D5E7A01BD651BF00B2DDEA /* RSAccountParam.h */,
+				88D5E7A11BD651BF00B2DDEA /* RSAccountParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
 		88E51D331BCF935100BC42C0 /* NewFeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1178,6 +1191,7 @@
 				8879FF4A1BD4DF5600D77EF2 /* UIImageView+WebCache.m in Sources */,
 				8879FEC71BD4C8B900D77EF2 /* MJExtensionConst.m in Sources */,
 				8879FEFE1BD4C8CB00D77EF2 /* MJRefreshAutoFooter.m in Sources */,
+				88D5E7A21BD651C000B2DDEA /* RSAccountParam.m in Sources */,
 				8879FF491BD4DF5600D77EF2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				8879FF041BD4C8CB00D77EF2 /* MJRefreshAutoNormalFooter.m in Sources */,
 				8879FF001BD4C8CB00D77EF2 /* MJRefreshComponent.m in Sources */,

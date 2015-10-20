@@ -4,17 +4,13 @@
 //
 //  Created by imac on 15/10/19.
 //  Copyright © 2015年 Roland Sung. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 
 @interface RSAccount : NSObject<NSCoding>
 
 
-//"access_token" = "2.00LQwiwBsk5LHCbb428ed0a8gdK66E";
-//        "expires_in" = 157679999;
-//        "remind_in" = 157679999;
-//        uid = 1783870707;
+
 /**
  *  获取数据的访问令牌
  */

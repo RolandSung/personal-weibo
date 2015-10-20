@@ -104,39 +104,16 @@
 
 - (void)accessTokenWithCode:(NSString *)code{
     
-    //POST请求
-    
-    //创建请求管理者
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    NSMutableDictionary *prams = [NSMutableDictionary dictionary];
-    
-    prams[@"client_id"] = @"1938416786";
-    prams[@"client_secret"] = @"52f5ff37e7832eb91776e5c7bdfaa222";
-    prams[@"grant_type"] = @"authorization_code";
-    prams[@"code"] = code;
-    prams[@"redirect_uri"] =@"https://github.com";
-    
-//    发送POST 请求
-    [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:prams success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-//        "access_token" = "2.00LQwiwBsk5LHCbb428ed0a8gdK66E";
-//        "expires_in" = 157679999;
-//        "remind_in" = 157679999;
-//        uid = 1783870707;
+            [RSAccountTool accountWithCode:code success:^{
 
-        //字典转模型
-        RSAccount *account = [RSAccount accountWithDictionary:responseObject];
-        [RSAccountTool saveAccount:account];
-        
-        [RSRootVCTool chooseRootViewController:RSKeyWindow];
-        
-        
-    } failure:
-    ^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        RSLog(@"%@",error);
-    }];
-    
-    
+                //选择窗口根控制
+                [RSRootVCTool chooseRootViewController:RSKeyWindow];
+
+            } failure:^(NSError *error) {
+            
+            
+        }];
+  
 }
 
 
