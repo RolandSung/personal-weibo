@@ -13,12 +13,13 @@
 #import "RSTitleButton.h"
 #import "RSCover.h"
 #import "RSPopMenu.h"
-#import "AFNetworking.h"
 #import "RSAccountTool.h"
 #import "MJExtension.h"
 #import "RSStatus.h"
 #import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "RSHttpTool.h"
+#import "RSStatusTool.h"
 
 
 @interface RSHomeViewController ()<RSCoverDelegate>
@@ -56,7 +57,8 @@
     [self _setUpNavigationBar];
     
     
-    
+    //上拉添加
+
     MJRefreshAutoFooter *footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreStatus)];
     
     
@@ -89,41 +91,26 @@
 
 - (void)loadMoreStatus{
     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
-    //请求参数
-    parameter[@"access_token"] = [RSAccountTool account].access_token;
-    //有数据才需要刷新
+    NSString *maxIDstr = nil;
     if (self.statuses.count) {
-        long long maxID = [[[self.statuses lastObject] idstr] longLongValue ]- 1 ;
-        parameter[@"max_id"] =[NSString stringWithFormat:@"%lld",maxID];
+     long long  maxID = [[[self.statuses lastObject] idstr] longLongValue] -1;
+        maxIDstr = [NSString stringWithFormat:@"%lld",maxID];
     }
     
-    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [RSStatusTool moreStatusWithMaxID:maxIDstr success:^(NSArray *statuses) {
         
-        //结束上拉刷新
         [self.tableView.footer endRefreshing];
-        
-        NSArray *dictArr = responseObject[@"statuses"];
-        
-        //字典数组转模型数组
-        NSArray *statuses = [RSStatus objectArrayWithKeyValuesArray:dictArr];
-        
-        //把元素添加进去
+
         [self.statuses addObjectsFromArray:statuses ];
         
         //刷新表格
         [self.tableView reloadData];
+
         
-        
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        
+    } failure:^(NSError *error) {
         
         RSLog(@"%@",error);
     }];
-
-    
     
     
     
@@ -133,36 +120,30 @@
 
 - (void)loadNewStatus{
     
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
-    
-    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
-    //请求参数
-    parameter[@"access_token"] = [RSAccountTool account].access_token;
-    if (self.statuses.count) {
-        parameter[@"since_id"] = [self.statuses[0] idstr];
+    NSString *sinceID = nil;
+    if (self.statuses.count) {//有数据才需要刷新
+        
+        sinceID = [self.statuses[0] idstr];
     }
-    
-    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameter success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-       
-        //结束下拉刷新
+   
+    [RSStatusTool newStatusWithSinceID:sinceID success:^(NSArray *statuses) {
+        
         [self.tableView.header endRefreshing];
-        
-        NSArray *dictArr = responseObject[@"statuses"];
-      
-        //字典数组转模型数组
-        NSArray *statuses = [RSStatus objectArrayWithKeyValuesArray:dictArr];
-        
+
+        //新微博排到前边
         NSIndexSet *indext = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
         [self.statuses insertObjects:statuses atIndexes:indext];
-
+        
         [self.tableView reloadData];
         
-        
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        
+    } failure:^(NSError *error) {
         
         RSLog(@"%@",error);
+        [self.tableView.header endRefreshing];
+        
     }];
+    
+    
     
     
     

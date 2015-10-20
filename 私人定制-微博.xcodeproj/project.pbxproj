@@ -91,6 +91,10 @@
 		88CF97651BC6821B004E0C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CF975D1BC6821B004E0C81 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		88D183281BC64D8C00FABF52 /* _______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D183271BC64D8C00FABF52 /* _______Tests.m */; };
 		88D183331BC64D8D00FABF52 /* _______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D183321BC64D8D00FABF52 /* _______UITests.m */; };
+		88D5E78F1BD614C100B2DDEA /* RSHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E78E1BD614C100B2DDEA /* RSHttpTool.m */; settings = {ASSET_TAGS = (); }; };
+		88D5E7951BD61F9C00B2DDEA /* RSStatusParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E7941BD61F9C00B2DDEA /* RSStatusParam.m */; settings = {ASSET_TAGS = (); }; };
+		88D5E79B1BD6211600B2DDEA /* RSStatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E79A1BD6211600B2DDEA /* RSStatusTool.m */; settings = {ASSET_TAGS = (); }; };
+		88D5E79E1BD6243E00B2DDEA /* RSStatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D5E79D1BD6243E00B2DDEA /* RSStatusResult.m */; settings = {ASSET_TAGS = (); }; };
 		88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
 		88E51D391BCF942200BC42C0 /* RSNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D381BCF942100BC42C0 /* RSNewFeatureController.m */; settings = {ASSET_TAGS = (); }; };
 		88E51D3C1BCF95B600BC42C0 /* RSNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E51D3B1BCF95B600BC42C0 /* RSNewFeatureCell.m */; settings = {ASSET_TAGS = (); }; };
@@ -288,6 +292,14 @@
 		88D1832E1BC64D8D00FABF52 /* 私人定制-微博UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "私人定制-微博UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D183321BC64D8D00FABF52 /* _______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_______UITests.m"; sourceTree = "<group>"; };
 		88D183341BC64D8D00FABF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88D5E78D1BD614C100B2DDEA /* RSHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSHttpTool.h; sourceTree = "<group>"; };
+		88D5E78E1BD614C100B2DDEA /* RSHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSHttpTool.m; sourceTree = "<group>"; };
+		88D5E7931BD61F9C00B2DDEA /* RSStatusParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusParam.h; sourceTree = "<group>"; };
+		88D5E7941BD61F9C00B2DDEA /* RSStatusParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusParam.m; sourceTree = "<group>"; };
+		88D5E7991BD6211600B2DDEA /* RSStatusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSStatusTool.h; path = result/RSStatusTool.h; sourceTree = "<group>"; };
+		88D5E79A1BD6211600B2DDEA /* RSStatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSStatusTool.m; path = result/RSStatusTool.m; sourceTree = "<group>"; };
+		88D5E79C1BD6243E00B2DDEA /* RSStatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusResult.h; sourceTree = "<group>"; };
+		88D5E79D1BD6243E00B2DDEA /* RSStatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusResult.m; sourceTree = "<group>"; };
 		88E1C4B31BCE27BD006FBECF /* RSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSMenuViewController.h; sourceTree = "<group>"; };
 		88E1C4B41BCE27BD006FBECF /* RSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSMenuViewController.m; sourceTree = "<group>"; };
 		88E51D371BCF942100BC42C0 /* RSNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSNewFeatureController.h; sourceTree = "<group>"; };
@@ -419,6 +431,8 @@
 		8879FEA51BD48CD300D77EF2 /* Tool(业务类) */ = {
 			isa = PBXGroup;
 			children = (
+				88D5E7901BD61F7100B2DDEA /* Status */,
+				88D5E78C1BD614A100B2DDEA /* Http */,
 				8879FEA61BD48CD300D77EF2 /* Account */,
 				8879FEA71BD48CD300D77EF2 /* RootVC */,
 			);
@@ -880,6 +894,44 @@
 			path = "私人定制-微博UITests";
 			sourceTree = "<group>";
 		};
+		88D5E78C1BD614A100B2DDEA /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				88D5E78D1BD614C100B2DDEA /* RSHttpTool.h */,
+				88D5E78E1BD614C100B2DDEA /* RSHttpTool.m */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		88D5E7901BD61F7100B2DDEA /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				88D5E7991BD6211600B2DDEA /* RSStatusTool.h */,
+				88D5E79A1BD6211600B2DDEA /* RSStatusTool.m */,
+				88D5E7911BD61F7100B2DDEA /* param */,
+				88D5E7921BD61F7100B2DDEA /* result */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		88D5E7911BD61F7100B2DDEA /* param */ = {
+			isa = PBXGroup;
+			children = (
+				88D5E7931BD61F9C00B2DDEA /* RSStatusParam.h */,
+				88D5E7941BD61F9C00B2DDEA /* RSStatusParam.m */,
+			);
+			path = param;
+			sourceTree = "<group>";
+		};
+		88D5E7921BD61F7100B2DDEA /* result */ = {
+			isa = PBXGroup;
+			children = (
+				88D5E79C1BD6243E00B2DDEA /* RSStatusResult.h */,
+				88D5E79D1BD6243E00B2DDEA /* RSStatusResult.m */,
+			);
+			path = result;
+			sourceTree = "<group>";
+		};
 		88E51D331BCF935100BC42C0 /* NewFeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1102,7 @@
 			files = (
 				8879FF461BD4DF5600D77EF2 /* UIImage+GIF.m in Sources */,
 				8879FE9D1BD473DD00D77EF2 /* AFSecurityPolicy.m in Sources */,
+				88D5E79B1BD6211600B2DDEA /* RSStatusTool.m in Sources */,
 				8879FF161BD4CCA600D77EF2 /* RSUser.m in Sources */,
 				88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */,
 				8879FEA41BD4891000D77EF2 /* RSAccount.m in Sources */,
@@ -1060,6 +1113,7 @@
 				8879FEC91BD4C8B900D77EF2 /* MJProperty.m in Sources */,
 				8879FEFF1BD4C8CB00D77EF2 /* MJRefreshBackFooter.m in Sources */,
 				881C7C7B1BD24BEA009E7285 /* MBProgressHUD.m in Sources */,
+				88D5E7951BD61F9C00B2DDEA /* RSStatusParam.m in Sources */,
 				886742D81BC7CA8500344180 /* RSNavigationController.m in Sources */,
 				8879FECA1BD4C8B900D77EF2 /* MJPropertyKey.m in Sources */,
 				8879FF0D1BD4C8CB00D77EF2 /* MJRefreshConst.m in Sources */,
@@ -1082,6 +1136,7 @@
 				8879FE9A1BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m in Sources */,
 				8879FEC81BD4C8B900D77EF2 /* MJFoundation.m in Sources */,
 				8879FF471BD4DF5600D77EF2 /* UIImage+MultiFormat.m in Sources */,
+				88D5E78F1BD614C100B2DDEA /* RSHttpTool.m in Sources */,
 				8879FF0B1BD4C8CB00D77EF2 /* MJRefreshStateHeader.m in Sources */,
 				8879FE991BD473DD00D77EF2 /* AFHTTPRequestOperation.m in Sources */,
 				88C4CE101BCCA9C70055A949 /* RSPopMenu.m in Sources */,
@@ -1112,6 +1167,7 @@
 				8879FF0A1BD4C8CB00D77EF2 /* MJRefreshNormalHeader.m in Sources */,
 				8879FEAD1BD4958C00D77EF2 /* RSRootVCTool.m in Sources */,
 				8879FE9F1BD473DD00D77EF2 /* AFURLRequestSerialization.m in Sources */,
+				88D5E79E1BD6243E00B2DDEA /* RSStatusResult.m in Sources */,
 				8879FF031BD4C8CB00D77EF2 /* MJRefreshAutoGifFooter.m in Sources */,
 				8879FF051BD4C8CB00D77EF2 /* MJRefreshAutoStateFooter.m in Sources */,
 				8879FF4B1BD4DF5600D77EF2 /* UIView+WebCacheOperation.m in Sources */,
