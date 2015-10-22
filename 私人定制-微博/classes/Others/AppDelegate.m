@@ -23,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    //注册通知
+    UIUserNotificationSettings *setting =  [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+    
+    [[UIApplication sharedApplication]registerUserNotificationSettings:setting];
     
    //创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

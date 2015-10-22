@@ -15,10 +15,14 @@
 #import "RSProfileViewController.h"
 
 #import "RSNavigationController.h"
-
+#import "RSUserTool.h"
 
 @interface RSTabBarController ()<RSTabBarDelegate>
 @property (nonatomic,strong) NSMutableArray *items;
+
+@property (nonatomic,weak) RSHomeViewController *home;
+@property (nonatomic,weak) RSMessageViewController *message;
+@property (nonatomic,weak) RSProfileViewController *profile;
 
 @end
 
@@ -53,7 +57,31 @@
     
     [self _setUpTabBar];
     
+    //定时请求未读数
+    
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(requireUnreadCount) userInfo:nil repeats:YES];
+    
 
+}
+
+- (void)requireUnreadCount{
+    
+    [RSUserTool unreadWithSuccess:^(RSUserResult *result) {
+        
+        _home.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.status];
+        _message.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.messageCount];
+        _profile.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",result.profileCount];
+        
+        //应用程序
+        [UIApplication sharedApplication].applicationIconBadgeNumber = result.totalCount;
+                                                                
+    } failure:^(NSError *error) {
+        
+        
+    }];
+    
+    
+    
 }
 
 - (void) _setUpTabBar{
@@ -91,13 +119,13 @@
     //首页
     RSHomeViewController *home = [[RSHomeViewController alloc]init];
     [self _setUpOneChildViewControllers:home image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageNamed: @"tabbar_home_selected"] title:@"首页"];
-
+    _home = home;
     
     //消息
     RSMessageViewController *message = [[RSMessageViewController alloc]init];
     [self _setUpOneChildViewControllers:message image:[UIImage imageNamed:@"tabbar_message_center"] selectedImage:[UIImage imageNamed:@"tabbar_message_center_selected"] title:@"消息"];
     
-
+    _message = message;
     
     //发现
     RSDiscoverViewController *discover = [[RSDiscoverViewController alloc]init];
@@ -107,6 +135,7 @@
     RSProfileViewController *profile = [[RSProfileViewController alloc]init];
     [self _setUpOneChildViewControllers:profile image:[UIImage imageNamed:@"tabbar_profile"] selectedImage:[UIImage imageNamed:@"tabbar_profile_selected"] title:@"我"];
     
+    _profile = profile;
 }
 
 #pragma mark - 设置子控制器属性
@@ -119,14 +148,13 @@
     vc.tabBarItem.image = image;
     //加载原始图片 ， 不渲染
     vc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc.tabBarItem.badgeValue = @"9";
     
-    //设置 TabBarItem的文字颜色
-    NSMutableDictionary *att  =[NSMutableDictionary dictionary];
-    att[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    
-    [vc.tabBarItem setTitleTextAttributes:att forState:UIControlStateSelected];
-    
+//    //设置 TabBarItem的文字颜色
+//    NSMutableDictionary *att  =[NSMutableDictionary dictionary];
+//    att[NSForegroundColorAttributeName] = [UIColor orangeColor];
+//    
+//    [vc.tabBarItem setTitleTextAttributes:att forState:UIControlStateSelected];
+//
     //保存tabBar模型到数组
     [self.items addObject:vc.tabBarItem];
     
@@ -141,6 +169,11 @@
 -(void)tabBar:(RSTabBar *)tabBar didClickButton:(NSInteger)index{
     
     self.selectedIndex  = index;
+    
+    if (index == 0 && index == self.selectedIndex) {
+    
+        [_home refresh];
+    }
     
 }
 

@@ -83,8 +83,13 @@
     
 }
 
-
-
+#pragma mark - 刷新最新的微博
+-(void)refresh{
+    
+    [self.tableView.header beginRefreshing];
+    
+    
+}
 
 
 #pragma mark - private method

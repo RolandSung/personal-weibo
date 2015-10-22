@@ -47,7 +47,7 @@
 #warning 方法更新
     CGSize size = [badgeValue sizeWithFont:[UIFont systemFontOfSize:11]];
     
-    if (size.width > self.frame.size.width) {
+    if (size.width > self.width) {
         [self setImage:[UIImage imageNamed:@"new_dot"] forState:UIControlStateNormal];
         [self setTitle:nil forState:UIControlStateNormal];
         [self setBackgroundImage:nil forState:UIControlStateNormal];

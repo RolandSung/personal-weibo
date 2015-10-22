@@ -24,14 +24,15 @@
 }
 
 
-//badgeView
+//badgeView懒加载
 -(RSBadgeView *)badgeView{
     
 
 if (_badgeView == nil) {
-        _badgeView = [RSBadgeView buttonWithType:UIButtonTypeCustom];
-    }
+        RSBadgeView *badgeView = [RSBadgeView buttonWithType:UIButtonTypeCustom];
+    _badgeView = badgeView;
     [self addSubview:_badgeView];
+    }
     return _badgeView;
 }
 
@@ -62,7 +63,7 @@ if (_badgeView == nil) {
     [item addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
     [item addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew context:nil];
     [item addObserver:self forKeyPath:@"selectedImage" options:NSKeyValueObservingOptionNew context:nil];
-    [item addObserver:self forKeyPath:@"badgeView" options:NSKeyValueObservingOptionNew context:nil];
+    [item addObserver:self forKeyPath:@"badgeValue" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 //监听到改变时调用

@@ -10,4 +10,6 @@
 
 @interface RSHomeViewController : UITableViewController
 
+- (void)refresh;
+
 @end

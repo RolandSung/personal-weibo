@@ -101,7 +101,7 @@
 
 
 
-
+//用code获取accessToken
 - (void)accessTokenWithCode:(NSString *)code{
     
             [RSAccountTool accountWithCode:code success:^{
