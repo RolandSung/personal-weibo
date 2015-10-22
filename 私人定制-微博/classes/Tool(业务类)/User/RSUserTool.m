@@ -36,8 +36,26 @@
         }
     }];
     
+}
+
++(void)userInfoWithSuccess:(void (^)(RSUser *))success failure:(void (^)(NSError *))failure{
     
+    RSUserParam *param = [RSUserParam param];
+    param.uid = [RSAccountTool account].uid;
     
+    [RSHttpTool GET:@"https://api.weibo.com/2/users/show.json" parameters:param.keyValues success:^(id responseObject) {
+        
+        RSUser *user = [RSUser objectWithKeyValues:responseObject];
+        
+        if (success) {
+            success(user);
+        }
+        
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
     
     
     

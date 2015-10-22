@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "RSUserResult.h"
+#import "RSUser.h"
 
 @interface RSUserTool : NSObject
 
 + (void)unreadWithSuccess:(void(^)(RSUserResult *result))success failure:(void(^)(NSError *error))failure;
+
+
++ (void)userInfoWithSuccess:(void(^)(RSUser *user))success failure:(void(^)(NSError *error))failure;
+
 
 @end

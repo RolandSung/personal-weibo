@@ -20,6 +20,8 @@
 #import "MJRefresh.h"
 #import "RSHttpTool.h"
 #import "RSStatusTool.h"
+#import "RSUserTool.h"
+//#import "RSUser.h"
 
 
 @interface RSHomeViewController ()<RSCoverDelegate>
@@ -81,6 +83,24 @@
     }
 
     
+    
+    //请求当前用户昵称
+    
+     [RSUserTool userInfoWithSuccess:^(RSUser *user) {
+        
+         //设置标题栏
+         [self.titleBtn setTitle:user.name forState:UIControlStateNormal];
+         //保存昵称信息
+        RSAccount *account = [RSAccountTool account];
+         account.name = user.name;
+         
+         [RSAccountTool saveAccount:account];
+         
+    } failure:^(NSError *error) {
+        
+        
+    }];
+    
 }
 
 #pragma mark - 刷新最新的微博
@@ -92,7 +112,7 @@
 }
 
 
-#pragma mark - private method
+#pragma mark - 上拉加载更多
 
 - (void)loadMoreStatus{
     
@@ -122,7 +142,7 @@
     
     
 }
-
+#pragma mark - 下拉更新
 - (void)loadNewStatus{
     
     NSString *sinceID = nil;
@@ -134,6 +154,9 @@
     [RSStatusTool newStatusWithSinceID:sinceID success:^(NSArray *statuses) {
         
         [self.tableView.header endRefreshing];
+        
+        //显示刷新的微博数
+        [self showNewStatusCount:(int)statuses.count];
 
         //新微博排到前边
         NSIndexSet *indext = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
@@ -147,13 +170,53 @@
         [self.tableView.header endRefreshing];
         
     }];
+}
+
+
+- (void)showNewStatusCount:(int)count{
     
+    CGFloat h = 35.0;
+    CGFloat x = 0.0;
+    CGFloat w = RSKScreenWidth;
+    CGFloat y = CGRectGetMaxY(self.navigationController.navigationBar.frame) - h ;
     
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(x, y, w, h)];
     
+    lable.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    lable.textColor = [UIColor whiteColor];
     
+    lable.textAlignment = NSTextAlignmentCenter;
     
+    if (count == 0) {
+        lable.text = @"没有更新的微博";
+    }else{
+    lable.text = [NSString stringWithFormat:@"已刷新%d条微博",count];
+    }
     
+    //插入导航条下面
+    [self.navigationController.view insertSubview:lable belowSubview:self.navigationController.navigationBar];
     
+    //平移动画
+    [UIView animateWithDuration:1 animations:^{
+        //向下平移出来
+        lable.transform = CGAffineTransformMakeTranslation(0, h);
+        
+    } completion:^(BOOL finished) {
+        
+    
+        [UIView animateWithDuration:1 delay:1 options:UIViewAnimationOptionCurveLinear animations:^{
+            //还原
+            lable.transform = CGAffineTransformIdentity;
+            
+        } completion:^(BOOL finished) {
+            
+            //移除
+            [lable removeFromSuperview];
+            
+        }];
+    }
+     
+     ];
     
     
 }
@@ -171,7 +234,12 @@
     
     [_titleBtn setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     [_titleBtn setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateSelected];
-    [_titleBtn setTitle:@"首页" forState:UIControlStateNormal];
+    
+    //设置
+    
+    NSString *title = [RSAccountTool account].name ?:@"首页";
+    
+    [_titleBtn setTitle:title forState:UIControlStateNormal];
     
     [_titleBtn addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
    

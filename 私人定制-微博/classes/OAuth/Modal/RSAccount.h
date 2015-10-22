@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RSAccount : NSObject<NSCoding>
+//@interface RSAccount : NSObject<NSCoding>
+@interface RSAccount : NSObject
 
 
 
@@ -29,6 +30,11 @@
 @property (nonatomic,copy) NSString *uid;
 
 @property (nonatomic,strong)NSDate *expires_date;
+
+/**
+ *  账户昵称
+ */
+@property (nonatomic,copy) NSString *name;
 
 +(instancetype)accountWithDictionary:(NSDictionary *)dic;
 
