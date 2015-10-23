@@ -29,4 +29,12 @@
 
 #endif
 
+/***    cell     ***/
+#define RSStatusCellMargin 10
+#define RSNameFont [UIFont systemFontOfSize:13]
+#define RSTimeFont [UIFont systemFontOfSize:12]
+#define RSTextFont [UIFont systemFontOfSize:15]
+
+
+
 #endif

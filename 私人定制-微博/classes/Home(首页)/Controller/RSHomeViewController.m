@@ -21,6 +21,10 @@
 #import "RSHttpTool.h"
 #import "RSStatusTool.h"
 #import "RSUserTool.h"
+
+#import "RSStatusCell.h"
+#import "RSStatusFrame.h"
+
 //#import "RSUser.h"
 
 
@@ -29,19 +33,23 @@
 @property(nonatomic,strong)RSMenuViewController *menuVC;
 @property(nonatomic,strong) RSTitleButton *titleBtn;
 
-@property (nonatomic,strong) NSMutableArray *statuses;
 
+/**
+ *  ViewModal
+ */
+@property (nonatomic,strong) NSMutableArray *statusFrames;
 @end
 
 @implementation RSHomeViewController
 
--(NSMutableArray *)statuses{
-    if (_statuses == nil) {
-        
-        _statuses = [NSMutableArray array];
+-(NSMutableArray *)statusFrames{
+    if (_statusFrames == nil) {
+        _statusFrames = [NSMutableArray array];
     }
-    return _statuses;
+    return _statusFrames;
+    
 }
+
 
 -(RSMenuViewController *)menuVC{
     if (_menuVC == nil) {
@@ -77,7 +85,7 @@
      self.tableView.header = header;
     
     //自动下拉刷新
-    if (_statuses == nil) {
+    if (_statusFrames == nil) {
         [self.tableView.header beginRefreshing];
 
     }
@@ -117,16 +125,26 @@
 - (void)loadMoreStatus{
     
     NSString *maxIDstr = nil;
-    if (self.statuses.count) {
-     long long  maxID = [[[self.statuses lastObject] idstr] longLongValue] -1;
+    if (self.statusFrames.count) {
+        
+        RSStatusFrame *statusF = [self.statusFrames lastObject];
+     long long  maxID = [[statusF.status idstr] longLongValue] -1;
         maxIDstr = [NSString stringWithFormat:@"%lld",maxID];
     }
     
     [RSStatusTool moreStatusWithMaxID:maxIDstr success:^(NSArray *statuses) {
         
         [self.tableView.footer endRefreshing];
-
-        [self.statuses addObjectsFromArray:statuses ];
+        
+        //模型 -转换->> 视图模型
+        NSMutableArray *statusFrames = [NSMutableArray array];
+        for (RSStatus *status in statuses) {
+            RSStatusFrame *statusFrame = [[RSStatusFrame alloc]init];
+            statusFrame.status = status;
+            [statusFrames addObject:statusFrame];
+        }
+        
+        [self.statusFrames addObjectsFromArray:statusFrames ];
         
         //刷新表格
         [self.tableView reloadData];
@@ -146,9 +164,10 @@
 - (void)loadNewStatus{
     
     NSString *sinceID = nil;
-    if (self.statuses.count) {//有数据才需要刷新
+    if (self.statusFrames.count) {//有数据才需要刷新
         
-        sinceID = [self.statuses[0] idstr];
+        RSStatusFrame *statusF = self.statusFrames[0];
+        sinceID = [statusF.status idstr];
     }
    
     [RSStatusTool newStatusWithSinceID:sinceID success:^(NSArray *statuses) {
@@ -158,9 +177,20 @@
         //显示刷新的微博数
         [self showNewStatusCount:(int)statuses.count];
 
+        
+        //模型 -转换->> 视图模型
+        NSMutableArray *statusFrames = [NSMutableArray array];
+        for (RSStatus *status in statuses) {
+            RSStatusFrame *statusFrame = [[RSStatusFrame alloc]init];
+            statusFrame.status = status;
+            [statusFrames addObject:statusFrame];
+        }
+
+        
+        
         //新微博排到前边
         NSIndexSet *indext = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, statuses.count)];
-        [self.statuses insertObjects:statuses atIndexes:indext];
+        [self.statusFrames insertObjects:statusFrames atIndexes:indext];
         
         [self.tableView reloadData];
         
@@ -292,71 +322,38 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.statuses.count;
+    return self.statusFrames.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID ];
+    RSStatusCell *cell = [RSStatusCell cellWithTableView:tableView];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
     
-    RSStatus *status = self.statuses[indexPath.row];
+    RSStatusFrame *statusF = self.statusFrames[indexPath.row];
     
-    cell.textLabel.text = status.user.name;
-    cell.detailTextLabel.text  =status.text;
-    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
+    //cell传递 模型
+    cell.statusFrame = statusF;
+    
+//    cell.textLabel.text = status.user.name;
+//    cell.detailTextLabel.text  =status.text;
+//    [cell.imageView sd_setImageWithURL:status.user.profile_image_url placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
     
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //获取ViewModal
+    RSStatusFrame *statusF = self.statusFrames[indexPath.row];
+    
+    
+    
+    return  statusF.cellHeight;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

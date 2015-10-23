@@ -22,6 +22,10 @@
 		886742E71BC8A7CE00344180 /* RSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E61BC8A7CE00344180 /* RSTabBar.m */; settings = {ASSET_TAGS = (); }; };
 		886742EA1BC8A9F400344180 /* RSTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742E91BC8A9F400344180 /* RSTabBarButton.m */; settings = {ASSET_TAGS = (); }; };
 		886742ED1BC8AA8800344180 /* RSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 886742EC1BC8AA8800344180 /* RSBadgeView.m */; settings = {ASSET_TAGS = (); }; };
+		88694C121BD9FFB900DD01FB /* RSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C0C1BD9FFB900DD01FB /* RSPhoto.m */; settings = {ASSET_TAGS = (); }; };
+		88694C131BD9FFB900DD01FB /* RSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C0E1BD9FFB900DD01FB /* RSStatus.m */; settings = {ASSET_TAGS = (); }; };
+		88694C141BD9FFB900DD01FB /* RSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C101BD9FFB900DD01FB /* RSUser.m */; settings = {ASSET_TAGS = (); }; };
+		88694C171BDA001A00DD01FB /* RSStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C161BDA001A00DD01FB /* RSStatusFrame.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE991BD473DD00D77EF2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE871BD473DD00D77EF2 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE9A1BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE891BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE9B1BD473DD00D77EF2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE8B1BD473DD00D77EF2 /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -64,9 +68,6 @@
 		8879FF0E1BD4C8CB00D77EF2 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FEF91BD4C8CB00D77EF2 /* UIScrollView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
 		8879FF0F1BD4C8CB00D77EF2 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FEFB1BD4C8CB00D77EF2 /* UIScrollView+MJRefresh.m */; settings = {ASSET_TAGS = (); }; };
 		8879FF101BD4C8CB00D77EF2 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FEFD1BD4C8CB00D77EF2 /* UIView+MJExtension.m */; settings = {ASSET_TAGS = (); }; };
-		8879FF131BD4C97D00D77EF2 /* RSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF121BD4C97D00D77EF2 /* RSStatus.m */; settings = {ASSET_TAGS = (); }; };
-		8879FF161BD4CCA600D77EF2 /* RSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF151BD4CCA600D77EF2 /* RSUser.m */; settings = {ASSET_TAGS = (); }; };
-		8879FF191BD4CCD600D77EF2 /* RSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF181BD4CCD600D77EF2 /* RSPhoto.m */; settings = {ASSET_TAGS = (); }; };
 		8879FF3C1BD4DF5500D77EF2 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF1C1BD4DF5500D77EF2 /* MKAnnotationView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		8879FF3D1BD4DF5500D77EF2 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF1E1BD4DF5500D77EF2 /* NSData+ImageContentType.m */; settings = {ASSET_TAGS = (); }; };
 		8879FF3E1BD4DF5500D77EF2 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FF201BD4DF5500D77EF2 /* SDImageCache.m */; settings = {ASSET_TAGS = (); }; };
@@ -87,6 +88,10 @@
 		8880E63B1BD8793600F2684D /* RSUserResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E63A1BD8793600F2684D /* RSUserResult.m */; settings = {ASSET_TAGS = (); }; };
 		8880E63F1BD87D8F00F2684D /* RSBaseParem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E63E1BD87D8F00F2684D /* RSBaseParem.m */; settings = {ASSET_TAGS = (); }; };
 		8880E6421BD880CC00F2684D /* RSUserTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E6411BD880CC00F2684D /* RSUserTool.m */; settings = {ASSET_TAGS = (); }; };
+		8880E6461BD8E35C00F2684D /* RSStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E6451BD8E35C00F2684D /* RSStatusCell.m */; settings = {ASSET_TAGS = (); }; };
+		8880E6491BD8E44200F2684D /* RSOriginalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E6481BD8E44200F2684D /* RSOriginalView.m */; settings = {ASSET_TAGS = (); }; };
+		8880E64C1BD8F73500F2684D /* RSRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E64B1BD8F73500F2684D /* RSRetweetView.m */; settings = {ASSET_TAGS = (); }; };
+		8880E64F1BD8F75900F2684D /* RSStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8880E64E1BD8F75900F2684D /* RSStatusToolBar.m */; settings = {ASSET_TAGS = (); }; };
 		88C4CE0D1BCCA9500055A949 /* RSTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */; settings = {ASSET_TAGS = (); }; };
 		88C4CE101BCCA9C70055A949 /* RSPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE0F1BCCA9C70055A949 /* RSPopMenu.m */; settings = {ASSET_TAGS = (); }; };
 		88C4CE131BCCA9DC0055A949 /* RSCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4CE121BCCA9DC0055A949 /* RSCover.m */; settings = {ASSET_TAGS = (); }; };
@@ -152,6 +157,14 @@
 		886742E91BC8A9F400344180 /* RSTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTabBarButton.m; sourceTree = "<group>"; };
 		886742EB1BC8AA8800344180 /* RSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSBadgeView.h; sourceTree = "<group>"; };
 		886742EC1BC8AA8800344180 /* RSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBadgeView.m; sourceTree = "<group>"; };
+		88694C0B1BD9FFB900DD01FB /* RSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSPhoto.h; sourceTree = "<group>"; };
+		88694C0C1BD9FFB900DD01FB /* RSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSPhoto.m; sourceTree = "<group>"; };
+		88694C0D1BD9FFB900DD01FB /* RSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatus.h; sourceTree = "<group>"; };
+		88694C0E1BD9FFB900DD01FB /* RSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatus.m; sourceTree = "<group>"; };
+		88694C0F1BD9FFB900DD01FB /* RSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUser.h; sourceTree = "<group>"; };
+		88694C101BD9FFB900DD01FB /* RSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUser.m; sourceTree = "<group>"; };
+		88694C151BDA001A00DD01FB /* RSStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusFrame.h; sourceTree = "<group>"; };
+		88694C161BDA001A00DD01FB /* RSStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusFrame.m; sourceTree = "<group>"; };
 		8879FE861BD473DD00D77EF2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		8879FE871BD473DD00D77EF2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		8879FE881BD473DD00D77EF2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -238,12 +251,6 @@
 		8879FEFB1BD4C8CB00D77EF2 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		8879FEFC1BD4C8CB00D77EF2 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		8879FEFD1BD4C8CB00D77EF2 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
-		8879FF111BD4C97D00D77EF2 /* RSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSStatus.h; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSStatus.h"; sourceTree = SOURCE_ROOT; };
-		8879FF121BD4C97D00D77EF2 /* RSStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSStatus.m; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSStatus.m"; sourceTree = SOURCE_ROOT; };
-		8879FF141BD4CCA600D77EF2 /* RSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSUser.h; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSUser.h"; sourceTree = SOURCE_ROOT; };
-		8879FF151BD4CCA600D77EF2 /* RSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSUser.m; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSUser.m"; sourceTree = SOURCE_ROOT; };
-		8879FF171BD4CCD600D77EF2 /* RSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSPhoto.h; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSPhoto.h"; sourceTree = SOURCE_ROOT; };
-		8879FF181BD4CCD600D77EF2 /* RSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSPhoto.m; path = "私人定制-微博/classes/Tool(业务类)/RootVC/RSPhoto.m"; sourceTree = SOURCE_ROOT; };
 		8879FF1B1BD4DF5500D77EF2 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		8879FF1C1BD4DF5500D77EF2 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		8879FF1D1BD4DF5500D77EF2 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -285,6 +292,14 @@
 		8880E63E1BD87D8F00F2684D /* RSBaseParem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSBaseParem.m; sourceTree = "<group>"; };
 		8880E6401BD880CC00F2684D /* RSUserTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSUserTool.h; sourceTree = "<group>"; };
 		8880E6411BD880CC00F2684D /* RSUserTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUserTool.m; sourceTree = "<group>"; };
+		8880E6441BD8E35C00F2684D /* RSStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusCell.h; sourceTree = "<group>"; };
+		8880E6451BD8E35C00F2684D /* RSStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusCell.m; sourceTree = "<group>"; };
+		8880E6471BD8E44200F2684D /* RSOriginalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOriginalView.h; sourceTree = "<group>"; };
+		8880E6481BD8E44200F2684D /* RSOriginalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOriginalView.m; sourceTree = "<group>"; };
+		8880E64A1BD8F73500F2684D /* RSRetweetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSRetweetView.h; path = "私人定制-微博/classes/Home(首页)/View/Cell/RSRetweetView.h"; sourceTree = SOURCE_ROOT; };
+		8880E64B1BD8F73500F2684D /* RSRetweetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSRetweetView.m; path = "私人定制-微博/classes/Home(首页)/View/Cell/RSRetweetView.m"; sourceTree = SOURCE_ROOT; };
+		8880E64D1BD8F75900F2684D /* RSStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSStatusToolBar.h; path = "私人定制-微博/classes/Home(首页)/View/Cell/RSStatusToolBar.h"; sourceTree = SOURCE_ROOT; };
+		8880E64E1BD8F75900F2684D /* RSStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSStatusToolBar.m; path = "私人定制-微博/classes/Home(首页)/View/Cell/RSStatusToolBar.m"; sourceTree = SOURCE_ROOT; };
 		88C4CE0B1BCCA9500055A949 /* RSTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTitleButton.h; sourceTree = "<group>"; };
 		88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTitleButton.m; sourceTree = "<group>"; };
 		88C4CE0E1BCCA9C70055A949 /* RSPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSPopMenu.h; sourceTree = "<group>"; };
@@ -415,6 +430,29 @@
 				881C7C7A1BD24BEA009E7285 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		88694C0A1BD9FFB900DD01FB /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				88694C111BD9FFB900DD01FB /* ViewModal */,
+				88694C0B1BD9FFB900DD01FB /* RSPhoto.h */,
+				88694C0C1BD9FFB900DD01FB /* RSPhoto.m */,
+				88694C0D1BD9FFB900DD01FB /* RSStatus.h */,
+				88694C0E1BD9FFB900DD01FB /* RSStatus.m */,
+				88694C0F1BD9FFB900DD01FB /* RSUser.h */,
+				88694C101BD9FFB900DD01FB /* RSUser.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		88694C111BD9FFB900DD01FB /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				88694C151BDA001A00DD01FB /* RSStatusFrame.h */,
+				88694C161BDA001A00DD01FB /* RSStatusFrame.m */,
+			);
+			path = ViewModal;
 			sourceTree = "<group>";
 		};
 		8879FE851BD473DD00D77EF2 /* AFNetworking */ = {
@@ -676,6 +714,22 @@
 			path = Param;
 			sourceTree = "<group>";
 		};
+		8880E6431BD8E32F00F2684D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8880E6441BD8E35C00F2684D /* RSStatusCell.h */,
+				8880E6451BD8E35C00F2684D /* RSStatusCell.m */,
+				8880E6471BD8E44200F2684D /* RSOriginalView.h */,
+				8880E6481BD8E44200F2684D /* RSOriginalView.m */,
+				8880E64A1BD8F73500F2684D /* RSRetweetView.h */,
+				8880E64B1BD8F73500F2684D /* RSRetweetView.m */,
+				8880E64D1BD8F75900F2684D /* RSStatusToolBar.h */,
+				8880E64E1BD8F75900F2684D /* RSStatusToolBar.m */,
+			);
+			name = Cell;
+			path = cell;
+			sourceTree = "<group>";
+		};
 		88CF97451BC6821B004E0C81 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,7 +785,7 @@
 			isa = PBXGroup;
 			children = (
 				88CF974B1BC6821B004E0C81 /* Controller */,
-				88CF974C1BC6821B004E0C81 /* Modal */,
+				88694C0A1BD9FFB900DD01FB /* Modal */,
 				88CF974D1BC6821B004E0C81 /* View */,
 			);
 			path = "Home(首页)";
@@ -748,22 +802,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		88CF974C1BC6821B004E0C81 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				8879FF111BD4C97D00D77EF2 /* RSStatus.h */,
-				8879FF121BD4C97D00D77EF2 /* RSStatus.m */,
-				8879FF141BD4CCA600D77EF2 /* RSUser.h */,
-				8879FF151BD4CCA600D77EF2 /* RSUser.m */,
-				8879FF171BD4CCD600D77EF2 /* RSPhoto.h */,
-				8879FF181BD4CCD600D77EF2 /* RSPhoto.m */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
 		88CF974D1BC6821B004E0C81 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8880E6431BD8E32F00F2684D /* Cell */,
 				88C4CE0B1BCCA9500055A949 /* RSTitleButton.h */,
 				88C4CE0C1BCCA9500055A949 /* RSTitleButton.m */,
 				88C4CE0E1BCCA9C70055A949 /* RSPopMenu.h */,
@@ -1168,12 +1210,12 @@
 				8879FF461BD4DF5600D77EF2 /* UIImage+GIF.m in Sources */,
 				8879FE9D1BD473DD00D77EF2 /* AFSecurityPolicy.m in Sources */,
 				88D5E79B1BD6211600B2DDEA /* RSStatusTool.m in Sources */,
-				8879FF161BD4CCA600D77EF2 /* RSUser.m in Sources */,
 				88E1C4B51BCE27BD006FBECF /* RSMenuViewController.m in Sources */,
 				8879FEA41BD4891000D77EF2 /* RSAccount.m in Sources */,
 				8879FF421BD4DF5500D77EF2 /* SDWebImageDownloaderOperation.m in Sources */,
+				8880E64C1BD8F73500F2684D /* RSRetweetView.m in Sources */,
+				88694C141BD9FFB900DD01FB /* RSUser.m in Sources */,
 				886742E71BC8A7CE00344180 /* RSTabBar.m in Sources */,
-				8879FF131BD4C97D00D77EF2 /* RSStatus.m in Sources */,
 				8879FECE1BD4C8B900D77EF2 /* NSObject+MJKeyValue.m in Sources */,
 				8879FEC91BD4C8B900D77EF2 /* MJProperty.m in Sources */,
 				8879FEFF1BD4C8CB00D77EF2 /* MJRefreshBackFooter.m in Sources */,
@@ -1194,22 +1236,24 @@
 				881C7C6E1BD23AEE009E7285 /* UIImage+RSImage.m in Sources */,
 				88E51D391BCF942200BC42C0 /* RSNewFeatureController.m in Sources */,
 				881C7C761BD2433A009E7285 /* RSOAuthController.m in Sources */,
-				8879FF191BD4CCD600D77EF2 /* RSPhoto.m in Sources */,
 				8879FEAA1BD48D0600D77EF2 /* RSAccountTool.m in Sources */,
 				88CF97621BC6821B004E0C81 /* RSTabBarController.m in Sources */,
 				8831AB4C1BCE73C00093CBAB /* RSSearchBar.m in Sources */,
 				8879FEA01BD473DD00D77EF2 /* AFURLResponseSerialization.m in Sources */,
 				8879FE9A1BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m in Sources */,
 				8879FEC81BD4C8B900D77EF2 /* MJFoundation.m in Sources */,
+				88694C131BD9FFB900DD01FB /* RSStatus.m in Sources */,
 				8879FF471BD4DF5600D77EF2 /* UIImage+MultiFormat.m in Sources */,
 				88D5E78F1BD614C100B2DDEA /* RSHttpTool.m in Sources */,
 				8879FF0B1BD4C8CB00D77EF2 /* MJRefreshStateHeader.m in Sources */,
+				8880E64F1BD8F75900F2684D /* RSStatusToolBar.m in Sources */,
 				8879FE991BD473DD00D77EF2 /* AFHTTPRequestOperation.m in Sources */,
 				88C4CE101BCCA9C70055A949 /* RSPopMenu.m in Sources */,
 				886742E41BC7CB1A00344180 /* RSProfileViewController.m in Sources */,
 				886742DE1BC7CAE300344180 /* RSHomeViewController.m in Sources */,
 				8879FF021BD4C8CB00D77EF2 /* MJRefreshHeader.m in Sources */,
 				8879FF0F1BD4C8CB00D77EF2 /* UIScrollView+MJRefresh.m in Sources */,
+				8880E6461BD8E35C00F2684D /* RSStatusCell.m in Sources */,
 				8879FF071BD4C8CB00D77EF2 /* MJRefreshBackNormalFooter.m in Sources */,
 				8879FF3F1BD4DF5500D77EF2 /* SDWebImageCompat.m in Sources */,
 				88CF97651BC6821B004E0C81 /* main.m in Sources */,
@@ -1229,6 +1273,7 @@
 				8879FECC1BD4C8B900D77EF2 /* NSObject+MJClass.m in Sources */,
 				8879FF061BD4C8CB00D77EF2 /* MJRefreshBackGifFooter.m in Sources */,
 				88CF97641BC6821B004E0C81 /* AppDelegate.m in Sources */,
+				88694C171BDA001A00DD01FB /* RSStatusFrame.m in Sources */,
 				8879FECF1BD4C8B900D77EF2 /* NSObject+MJProperty.m in Sources */,
 				8879FF401BD4DF5500D77EF2 /* SDWebImageDecoder.m in Sources */,
 				881C7C6F1BD23AEE009E7285 /* UIView+RSFrame.m in Sources */,
@@ -1238,6 +1283,7 @@
 				88D5E79E1BD6243E00B2DDEA /* RSStatusResult.m in Sources */,
 				8879FF031BD4C8CB00D77EF2 /* MJRefreshAutoGifFooter.m in Sources */,
 				8879FF051BD4C8CB00D77EF2 /* MJRefreshAutoStateFooter.m in Sources */,
+				8880E6491BD8E44200F2684D /* RSOriginalView.m in Sources */,
 				8879FF4B1BD4DF5600D77EF2 /* UIView+WebCacheOperation.m in Sources */,
 				88C4CE0D1BCCA9500055A949 /* RSTitleButton.m in Sources */,
 				8879FF481BD4DF5600D77EF2 /* UIImage+WebP.m in Sources */,
@@ -1257,6 +1303,7 @@
 				8880E6421BD880CC00F2684D /* RSUserTool.m in Sources */,
 				8879FF011BD4C8CB00D77EF2 /* MJRefreshFooter.m in Sources */,
 				8879FF3E1BD4DF5500D77EF2 /* SDImageCache.m in Sources */,
+				88694C121BD9FFB900DD01FB /* RSPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
