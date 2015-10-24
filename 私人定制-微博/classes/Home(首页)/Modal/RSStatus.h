@@ -18,6 +18,12 @@
  *  用户
  */
 @property (nonatomic,strong) RSUser *user;
+
+/**
+ *  转发微博的name
+ */
+@property (nonatomic,copy) NSString *retweetName;
+
 /**
  *  微博创建时间
  */

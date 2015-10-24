@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RSStatus;
 
-@interface RSStatusToolBar : UIView
+@interface RSStatusToolBar : UIImageView
+
+@property (nonatomic ,strong) RSStatus *status;
 
 @end

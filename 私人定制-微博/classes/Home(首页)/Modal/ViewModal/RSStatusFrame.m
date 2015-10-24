@@ -69,19 +69,7 @@
     CGFloat vipWH = 14;
     _originalVipFrame = CGRectMake(vipX, vipY, vipWH, vipWH);
     
-    //时间
-    CGFloat timeX = nameX;
-    CGFloat timeY = CGRectGetMaxY(_originalNameFrame) +RSStatusCellMargin * 0.5;
-    NSDictionary *timeAttr = @{NSFontAttributeName:RSTimeFont};
-    CGSize timeSize = [_status.created_at sizeWithAttributes:timeAttr];
-    _originalTimeFrame = (CGRect){{timeX,timeY},timeSize};
-    
-    // 来源
-    CGFloat sourceX = CGRectGetMaxX(_originalTimeFrame) + RSStatusCellMargin;
-    CGFloat sourceY = timeY;
-    NSDictionary *sourceAttr = @{NSFontAttributeName:RSTimeFont};
-    CGSize sourceSize = [_status.source sizeWithAttributes:sourceAttr];
-    _originalSourceFrame = (CGRect){{sourceX,sourceY},sourceSize};
+   
     
     // 正文
     CGFloat textX = iconX;

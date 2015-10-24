@@ -34,7 +34,7 @@
         //配置子视图
         [self configureChildViews];
         self.userInteractionEnabled = YES;
-        self.image = [UIImage imageNamed:@"timeline_card_top_background"];
+        self.image = [UIImage imageWithStretchableImageName:@"timeline_card_top_background"];
     }
     
     return self;
@@ -70,6 +70,7 @@
     //来源
     UILabel *sourceView = [[UILabel alloc]init];
     sourceView.font = RSTimeFont;
+    sourceView.textColor = [UIColor lightGrayColor];
     [self addSubview:sourceView];
     _sourceView = sourceView;
     
@@ -141,10 +142,23 @@
     
     // 时间
     _timeView.text = status.created_at;
+
+    CGFloat timeX = _nameView.x;
+    CGFloat timeY = CGRectGetMaxY(_nameView.frame) +RSStatusCellMargin * 0.5;
+    NSDictionary *timeAttr = @{NSFontAttributeName:RSTimeFont};
+    CGSize timeSize = [_timeView.text sizeWithAttributes:timeAttr];
+    _timeView.frame = (CGRect){{timeX,timeY},timeSize};
     
-    // 来源
-    
+
+       // 来源
     _sourceView.text = status.source;
+
+    CGFloat sourceX = CGRectGetMaxX(_timeView.frame) + RSStatusCellMargin;
+    CGFloat sourceY = timeY;
+    NSDictionary *sourceAttr = @{NSFontAttributeName:RSTimeFont};
+    CGSize sourceSize = [_sourceView.text sizeWithAttributes:sourceAttr];
+    _sourceView.frame = (CGRect){{sourceX,sourceY},sourceSize};
+    
     
     // 正文
     _textView.text = status.text;

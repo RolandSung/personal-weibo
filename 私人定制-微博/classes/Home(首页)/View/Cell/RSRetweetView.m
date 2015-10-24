@@ -30,7 +30,7 @@
         //配置子视图
         [self configureChildViews];
         self.userInteractionEnabled = YES;
-        self.image = [UIImage imageNamed:@"timeline_retweet_background"];
+        self.image = [UIImage imageWithStretchableImageName:@"timeline_retweet_background"];
 
     }
     
@@ -44,6 +44,7 @@
     //昵称
     UILabel *nameView = [[UILabel alloc]init];
     nameView.font = RSNameFont;
+    nameView.textColor = [UIColor colorWithRed:0 green:0.9 blue:1 alpha:0.9];
 
     [self addSubview:nameView];
     _nameView = nameView;
@@ -68,6 +69,7 @@
     // 昵称
     _nameView.frame = statusFrame.retweetNameFrame;
     _nameView.text = status.retweeted_status.user.name;
+//    _nameView.text = status.retweetName;
     
     // 正文
     _textView.frame = statusFrame.retweetTextFrame;

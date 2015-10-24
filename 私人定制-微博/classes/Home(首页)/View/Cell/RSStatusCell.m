@@ -26,10 +26,14 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
+    
+    
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
         //配置子视图
+        self.userInteractionEnabled = YES;
         [self configureChildViews];
+        [self setBackgroundColor:[UIColor clearColor]];
     }
     
     return self;
@@ -102,6 +106,7 @@
     //设置工具条的frame
 
     _toolBar.frame = statusFrame.toolBarFrame;
+    _toolBar.status = statusFrame.status;
     
     
 }
