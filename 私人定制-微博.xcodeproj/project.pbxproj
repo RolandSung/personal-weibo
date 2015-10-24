@@ -26,6 +26,7 @@
 		88694C131BD9FFB900DD01FB /* RSStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C0E1BD9FFB900DD01FB /* RSStatus.m */; settings = {ASSET_TAGS = (); }; };
 		88694C141BD9FFB900DD01FB /* RSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C101BD9FFB900DD01FB /* RSUser.m */; settings = {ASSET_TAGS = (); }; };
 		88694C171BDA001A00DD01FB /* RSStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 88694C161BDA001A00DD01FB /* RSStatusFrame.m */; settings = {ASSET_TAGS = (); }; };
+		887303C61BDB1385000B73CB /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 887303C51BDB1385000B73CB /* NSDate+MJ.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE991BD473DD00D77EF2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE871BD473DD00D77EF2 /* AFHTTPRequestOperation.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE9A1BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE891BD473DD00D77EF2 /* AFHTTPRequestOperationManager.m */; settings = {ASSET_TAGS = (); }; };
 		8879FE9B1BD473DD00D77EF2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879FE8B1BD473DD00D77EF2 /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
@@ -165,6 +166,8 @@
 		88694C101BD9FFB900DD01FB /* RSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSUser.m; sourceTree = "<group>"; };
 		88694C151BDA001A00DD01FB /* RSStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSStatusFrame.h; sourceTree = "<group>"; };
 		88694C161BDA001A00DD01FB /* RSStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSStatusFrame.m; sourceTree = "<group>"; };
+		887303C41BDB1385000B73CB /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		887303C51BDB1385000B73CB /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
 		8879FE861BD473DD00D77EF2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		8879FE871BD473DD00D77EF2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		8879FE881BD473DD00D77EF2 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 		881C7C661BD23AEE009E7285 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				887303C41BDB1385000B73CB /* NSDate+MJ.h */,
+				887303C51BDB1385000B73CB /* NSDate+MJ.m */,
 				881C7C671BD23AEE009E7285 /* UIBarButtonItem+RSItem.h */,
 				881C7C681BD23AEE009E7285 /* UIBarButtonItem+RSItem.m */,
 				881C7C691BD23AEE009E7285 /* UIImage+RSImage.h */,
@@ -1214,6 +1219,7 @@
 				8879FEA41BD4891000D77EF2 /* RSAccount.m in Sources */,
 				8879FF421BD4DF5500D77EF2 /* SDWebImageDownloaderOperation.m in Sources */,
 				8880E64C1BD8F73500F2684D /* RSRetweetView.m in Sources */,
+				887303C61BDB1385000B73CB /* NSDate+MJ.m in Sources */,
 				88694C141BD9FFB900DD01FB /* RSUser.m in Sources */,
 				886742E71BC8A7CE00344180 /* RSTabBar.m in Sources */,
 				8879FECE1BD4C8B900D77EF2 /* NSObject+MJKeyValue.m in Sources */,
@@ -1424,6 +1430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "私人定制-微博/classes/Others/私人定制-weibo.pch";
 				INFOPLIST_FILE = "私人定制-微博/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
@@ -1438,6 +1445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "私人定制-微博/classes/Others/私人定制-weibo.pch";
 				INFOPLIST_FILE = "私人定制-微博/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;

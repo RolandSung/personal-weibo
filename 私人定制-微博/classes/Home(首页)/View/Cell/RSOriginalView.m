@@ -62,6 +62,7 @@
     
     //时间
     UILabel *timeView = [[UILabel alloc]init];
+    timeView.textColor = [UIColor orangeColor];
     timeView.font = RSTimeFont;
     [self addSubview:timeView];
     _timeView = timeView;

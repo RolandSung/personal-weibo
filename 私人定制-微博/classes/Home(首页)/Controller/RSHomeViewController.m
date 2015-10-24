@@ -152,6 +152,9 @@
         
     } failure:^(NSError *error) {
         
+        [self.tableView.footer endRefreshing];
+
+        
         RSLog(@"%@",error);
     }];
     
